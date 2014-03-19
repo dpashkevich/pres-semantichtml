@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Семантический HTML</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <style>
+            @font-face {
+                font-family: 'DaysRegular';
+                src: url('./lib/font/Days-webfont.eot');
+                src: url('./lib/font/Days-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('./lib/font/Days-webfont.woff') format('woff'),
+                     url('./lib/font/Days-webfont.ttf') format('truetype'),
+                     url('./lib/font/Days-webfont.svg#DaysRegular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+            .reveal {
+                font-family: "Ubuntu", sans-serif;
+            }
+                .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+                    font-family: "DaysRegular", sans-serif;
+                }
+                .reveal h1 {
+                    line-height: 1.0em;
+                    font-size: 2.0em;
+                }
+                .reveal h2 {
+                    font-size: 1.5em;
+                    line-height: 1em;
+                }
+                .reveal h3 {
+                    font-size: 1.2em;
+
+                }
+                .reveal code {
+                    background-color: #333;
+                }
+                .reveal abbr {
+                    border-bottom-style: dotted;
+                    border-bottom-width: 1px;
+                }
+                .reveal figcaption {
+                    font-size: 0.6em;
+                    line-height: 1em;
+                }
+        </style>
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Семантический HTML</h1>
+
+                    Пашкевич Дмитрий
+                </section>
+
+                <section>
+                    <h2>Цель</h2>
+
+                    <ul>
+                        <li>Осознанно подходить HTML-разработке</li>
+                        <li>Относиться к HTML-страницам как к <em>документам</em></li>
+                        <li>Укрепить навыки Front-End разработки</li>
+                    </ul>
+                </section>
+
+                <section>
+
+                    <section>
+                        <h2>Классический документ: публикация</h2>
+                        <p><em>Имеет структуру!</em></p>
+                        <ul class="fragment">
+                            <li>Титульный лист</li>
+                            <li>Оглавление</li>
+                            <li>Введение</li>
+                            <li>Разделы</li>
+                            <li>Заключение</li>
+                            <li>Литература</li>
+                        </ul>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage1.png" alt="Документ - титульный лист (1)"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage2.png" alt="Документ - титульный лист (2)"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage3.png" alt="Документ - титульный лист (3)"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-article1.png" alt="Документ - статья (1)"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-article2.png" alt="Документ - статья (2)"></a>
+                    </section>
+
+                    <section>
+                        <p>Прочие элементы</p>
+
+                        <ul>
+                            <li>Колонтитулы</li>
+                            <li>Сноски</li>
+                            <li>Примечания</li>
+                            <li>Определения</li>
+                            <li>Таблицы</li>
+                            <li>Формулы</li>
+                            <li>...</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>World Wide Web</h2>
+
+                        <p>Тоже состоит из <em>документов</em>!</p>
+                        <ul>
+                            <li class="fragment">Большое разнообразие структурных элементов</li>
+                            <li class="fragment">Большая вложенность (матрешка)</li>
+                            <li class="fragment">Высокая динамичность (живой контент)</li>
+                            <li class="fragment">Большое разнообразие представлений</li>
+                        </ul>
+
+                        <ul class="fragment" style="margin-top: 1em;">
+                            <li>По-прежнему документы!</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Пример: блог</h3>
+
+                        <p><a href="http://diveintohtml5.info/examples/blog-html5.html">Источник</a></p>
+                        <img src="img/weblog.png" alt="Блог">
+
+                        <aside class="notes">
+                            шапка
+                            заголовок
+                            дата
+                            тело
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>Пример: блог (3D-вид Firefox)</h3>
+
+                        <img src="img/weblog-3dtilt_2.png" alt="Блог">
+
+                        <aside class="notes">
+                            Как составляются Web-документы?
+                        </aside>
+                    </section>
+                </section>
+
+
+                <section>
+                    <h2>Гипертекст</h2>
+
+                    <ul>
+                        <li class="fragment">Фундаментальный элемент WWW</li>
+                        <li class="fragment"><i>Набор текстов со ссылками между ними<br> (<strong>гиперссылки</strong>)</i></li>
+                        <li class="fragment">Легко расширять, связывать, делиться</li>
+                        <li class="fragment">Язык разметки гипертекста &mdash; HTML</li>
+                    </ul>
+
+                    <aside class="notes">
+                        Рассказываю т.к. эти принципы нужно держать в голове при составлении Web-документов
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Место HTML</h2>
+
+                    <img src="img/three-pillars.png">
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Структура HTML</h2>
+
+                        <ul>
+                            <li>Элементы разных типов, обозначаются тегами</li>
+                            <li>Корневой элемент <code>&lt;html&gt;</code></li> <!-- которым многие пренебрегают -->
+                            <li>Есть невидимый элемент <code>&lt;head&gt;</code>, содержащий<br>
+                                информацию о документе (<i>метаданные</i>)
+                            </li>
+                            <li>Элемент <code>&lt;body&gt;</code> для видимого содержимого</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <p>Многие пренебрегают элементом html, хотя это полноценный элемент!</p>
+                            <p>В head может быть очень много полезной информации о документе (метаданные), также как на титульном листе публикации. Следует хорошо в этом разбираться.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>Порядок следования элементов</h3>
+
+                        <p class="fragment"><strong>Важен!</strong></p>
+
+                        <ul>
+                            <li class="fragment">Поисковики, RSS, проч.</li>
+                            <li class="fragment">Мобильные браузеры</li>
+                            <li class="fragment">Клавиатурная навигация</li>
+                            <li class="fragment">Поиск внутри страницы</li>
+                        </ul>
+
+                        <p class="fragment" style="margin-top: 1em"><a target="_blank" href="http://www.adobe.com/devnet/html5/articles/semantic-markup.html">Пример</a> (правая колонка)<p>
+                    </section>
+
+                    <section>
+                        <h3>Ссылки</h3>
+
+                        <ul>
+                            <li class="fragment">Важнейший элемент Web-документов!</li> <!-- То, что делает гипертекст гипертекстом -->
+                            <li class="fragment">Два типа: <!-- spoiler -->
+                                <ul>
+                                    <li class="fragment">Гиперссылки <code>&lt;a&gt;</code></li>
+                                    <li class="fragment">Ссылки на внешние ресурсы <code>&lt;link&gt;</code>  <!-- В этом смысл того, что мы копипастим каждый день -->
+                                        <p class="fragment"><i>Дополняют <strong>текущий</strong> элемент</i></p>
+                                        <ul class="fragment">
+                                            <li>Стили, иконки, шрифты, скрипты</li>
+                                            <li>Новостная лента (RSS)</li>
+                                            <li>Версия на другом языке</li>
+                                            <li>PDF-версия</li>
+                                            <li>Следующая/предыдущая страница</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <ul style="margin-top: 1em;" class="fragment">
+                            <li><strong>Не ломайте их функционал</strong></li>
+                            <li><strong>Не изобретайте <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#linkTypes">велосипед</a></strong></li>
+                        </ul>
+
+                        <aside class="notes">
+                            <p>Ссылки - то, что главным образом делает гипертекст гипертекстом</p>
+                            <p>link - не просто какой-то служебный тег. Это ССЫЛКА на внешний ресурс</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>HTML5</h2>
+
+                        <ul>
+                            <li>Упрощен синтаксис</li>
+                            <li>Новые элементы и атрибуты</li>
+                            <li>Новые API</li>
+                            <li>Четкий алгоритм &laquo;чтения&raquo; браузером
+                                <ul>
+                                    <li>Определение структуры</li>
+                                    <li>Обработка ошибок</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Новые элементы</h3>
+
+                        <ul>
+                            <li>section, article, aside, nav</li>
+                            <li>header, footer</li>
+                            <li>figure, figcaption</li>
+                            <li>time, meter, progress, mark</li>
+                            <li>audio, video, canvas</li>
+                        </ul>
+
+                        <p><a href="http://www.w3.org/TR/html5-diff/#new-elements">Полный список</a></p>
+                    </section>
+
+                    <section>
+                        <h3>Не хватает элементов?</h3>
+
+                        <p class="fragment">Точно?</p>
+                        <p class="fragment">Используйте атрибут <code>class</code></p>
+                    </section>
+
+                    <section>
+                        <h3>Секции</h3>
+
+                        <figure>
+                            <img src="img/html5_structure-smashingmag.png" alt="Структура документа в HTML5">
+                            <figcaption>Источник - <a href="http://coding.smashingmagazine.com/2009/07/16/html5-and-the-future-of-the-web/">Smashing Magazine</a></figcaption>
+                        </figure>
+                        Каждая секция - &laquo;мини-документ&raquo;
+                    </section>
+
+                    <section>
+                        <h3>Новые поля ввода</h3>
+
+                        <p>
+                            <code>search</code>, <code>email</code>, <code>url</code>, <code>tel</code>,<code>number</code>, <br>
+                            <code>range</code>, <code>color</code><br>
+                            <code>date</code>, <code>month</code>, <code>week</code>, <br>
+                            <code>time</code>, <code>datetime</code>, <code>datetime-local</code>
+                        </p>
+
+                        <p><a href="http://html5doctor.com/html5-forms-input-types/" target="_blank">Статья</a></p>
+                    </section>
+
+                    <section>
+                        <h3>Ввод: не только текст!</h3>
+
+                        <p><code>&lt;input type=&quot;file&quot; accept=&quot;image/*;capture=camera&quot;&gt;</code></p>
+                        <p><code>&lt;input type=&quot;file&quot; accept=&quot;video/*;capture=camcorder&quot;&gt;</code></p>
+                        <p><code>&lt;input type=&quot;file&quot; accept=&quot;audio/*;capture=microphone&quot;&gt;</code></p>
+
+                        <a href="http://jsfiddle.net/dipish/WWqR5/show/">Демо</a>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Преимущества семантической верстки</h2>
+
+                    <ul>
+                        <li class="fragment">Лучше обрабатывается программами</li>
+                        <li class="fragment">Повышается качество CSS+JS</li>
+                        <li class="fragment">Легче менять представление</li>
+                        <li class="fragment">Многократное использование HTML-кода</li>
+                    </ul>
+
+                    <aside class="notes">
+                        Хорошо и разработчику (эффективная работа, интеграция с сервисами, минимальное повторение усилий), и в итоге конечному пользователю (пользователи используют программы)
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Demo: <a href="http://css-tricks.com" target="_blank">css-tricks.com</a></h2>
+                        <img src="img/csstricks-wide.png" alt="CSS Tricks - экран 4:3" title="Экран 4:3">
+                    </section>
+                    <section>
+                        <h3>Мобильный вид</h3>
+                        <img src="img/csstricks-mobile.png" alt="CSS Tricks - мобильный вид" title="Мобильный">
+                    </section>
+                    <section>
+                        <h3>Мобильный вид (c навигацией)</h3>
+                        <img src="img/csstricks-mobile-nav.png" alt="CSS Tricks - мобильный вид (c навигацией)" title="Мобильный с навигацией">
+                    </section>
+                    <section>
+                        <h3>Печать</h3>
+                        <img src="img/csstricks-print.png" alt="CSS Tricks - печать" title="Печать">
+                    </section>
+                    <section>
+                        <h3><a href="http://evernote.com/webclipper/">Evernote Clipped Article</a></h3>
+                        <img src="img/csstricks-evernote.png" alt="CSS Tricks - Evernote Clipped Article" title="Evernote CLipped Article">
+                    </section>
+                    <section>
+                        <h3>Google (статья)</h3>
+                        <img src="img/csstricks-googlesearch.png" alt="Статья в результатах поиска" title="Статья в результатах поиска">
+                    </section>
+                    <section>
+                        <h3>Google (домашняя страница)</h3>
+                        <img src="img/csstricks-googlesearch-homepage.png" alt="Домашняя страница в результатах поиска" title="Домашняя в результатах поиска">
+                    </section>
+                    <section>
+                        <h3>Google Plus Share</h3>
+                        <img src="img/csstricks-googleplus-share.png" alt="Статья расшарена в Google+" title="Статья расшарена в Google+">
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Заключение</h2>
+
+                    <ul>
+                        <li class="fragment">Относитесь ответственно к <abbr title="Information Architecture (Архитектура Информации)">IA</abbr></li>
+                        <li class="fragment">Гиперссылки важны! Берегите их</li>
+                        <li class="fragment">Составляя HTML, Вы составляете<br>
+                            <em>структуру информации</em>
+                        </li>
+                        <li class="fragment">Делайте ошибки, экспериментируйте</li>
+                        <li class="fragment">Следите за стандартами</li>
+                        <li class="fragment"><i>Смотрите на дату материалов</i></li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                maxScale: 1.2,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
