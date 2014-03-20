@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Семантический HTML</title>
+        <title>Semantic HTML &mdash; by Dmitry Pashkevich</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -43,6 +43,7 @@
                 }
                 .reveal h3 {
                     font-size: 1.2em;
+                    text-transform: none;
 
                 }
                 .reveal code {
@@ -78,66 +79,70 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Семантический HTML</h1>
+                    <h1>Semantic HTML</h1>
 
-                    Пашкевич Дмитрий
+                    <a href="http://dpashk.com" rel="author">Dmitry Pashkevich</a>
                 </section>
 
                 <section>
-                    <h2>Цель</h2>
+                    <h2>Goals</h2>
 
                     <ul>
-                        <li>Осознанно подходить HTML-разработке</li>
-                        <li>Относиться к HTML-страницам как к <em>документам</em></li>
-                        <li>Укрепить навыки Front-End разработки</li>
+                        <li>Thoughtful approach to composing HTML</li>
+                        <li>Treat HTML pages as <em>documents</em></li>
+                        <li>Better overall front end code</li>
                     </ul>
                 </section>
 
                 <section>
 
                     <section>
-                        <h2>Классический документ: публикация</h2>
-                        <p><em>Имеет структуру!</em></p>
-                        <ul class="fragment">
-                            <li>Титульный лист</li>
-                            <li>Оглавление</li>
-                            <li>Введение</li>
-                            <li>Разделы</li>
-                            <li>Заключение</li>
-                            <li>Литература</li>
-                        </ul>
-                    </section>
-
-                    <section data-transition="none">
-                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage1.png" alt="Документ - титульный лист (1)"></a>
-                    </section>
-
-                    <section data-transition="none">
-                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage2.png" alt="Документ - титульный лист (2)"></a>
-                    </section>
-
-                    <section data-transition="none">
-                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage3.png" alt="Документ - титульный лист (3)"></a>
-                    </section>
-
-                    <section data-transition="none">
-                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-article1.png" alt="Документ - статья (1)"></a>
-                    </section>
-
-                    <section data-transition="none">
-                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-article2.png" alt="Документ - статья (2)"></a>
+                        <h2>Real world document: publication</h2>
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage1.png" width="50%" alt="Publication example"></a>
                     </section>
 
                     <section>
-                        <p>Прочие элементы</p>
+                        <h2>Has structure!</h2>
+                        <ul>
+                            <li>Front page</li>
+                            <li>Table of contents</li>
+                            <li>Introduction</li>
+                            <li>Chapters</li>
+                            <li>Conclusions</li>
+                            <li>References</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage1.png" alt="Publication - front page"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage2.png" alt="Publication - front page (titled)"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-frontpage3.png" alt="Publication - front page (elements marked up)"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-article1.png" alt="Publication - chapter"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><img src="img/doc-article2.png" alt="Publication - chapter (elements marked up)"></a>
+                    </section>
+
+                    <section>
+                        <h2>Other elements</h2>
 
                         <ul>
-                            <li>Колонтитулы</li>
-                            <li>Сноски</li>
-                            <li>Примечания</li>
-                            <li>Определения</li>
-                            <li>Таблицы</li>
-                            <li>Формулы</li>
+                            <li>Header &amp; footer</li>
+                            <li>Footnotes</li>
+                            <li>Asides</li>
+                            <li>Definitions</li>
+                            <li>Tables</li>
+                            <li>Formulas</li>
                             <li>...</li>
                         </ul>
                     </section>
@@ -148,40 +153,71 @@
                     <section>
                         <h2>World Wide Web</h2>
 
-                        <p>Тоже состоит из <em>документов</em>!</p>
-                        <ul>
-                            <li class="fragment">Большое разнообразие структурных элементов</li>
-                            <li class="fragment">Большая вложенность (матрешка)</li>
-                            <li class="fragment">Высокая динамичность (живой контент)</li>
-                            <li class="fragment">Большое разнообразие представлений</li>
-                        </ul>
-
-                        <ul class="fragment" style="margin-top: 1em;">
-                            <li>По-прежнему документы!</li>
-                        </ul>
+                        <p>Made up of <em>documents</em> !</p>
+                        TODO image
                     </section>
 
                     <section>
-                        <h3>Пример: блог</h3>
+                        <h2>World Wide Web</h2>
 
-                        <p><a href="http://diveintohtml5.info/examples/blog-html5.html">Источник</a></p>
-                        <img src="img/weblog.png" alt="Блог">
+                        <h3>Plenty of elements</h3>
+
+                        TODO image
+                    </section>
+
+                    <section>
+                        <h2>World Wide Web</h2>
+
+                        <h3>Deep nesting</h3>
+
+                        TODO image of matryoshka
+                    </section>
+
+                    <section>
+                        <h2>World Wide Web</h2>
+
+                        <h3>High dynamicity</h3>
+
+                        TODO image, live content
+                    </section>
+
+                    <section>
+                        <h2>World Wide Web</h2>
+
+                        <h3>Many representations</h3>
+
+                        TODO image same data, many representations
+                        * desktop-tablet-mobile?
+                        * website-snippet-print
+                    </section>
+
+                    <section>
+                        <h2>Still documents!</h2>
+
+                        <img src="img/sitemap.png" alt="Sitemap example">
+                    </section>
+
+                    <section>
+                        <h3>Example: blog</h3>
+
+                        <p><a href="http://diveintohtml5.info/examples/blog-html5.html">Source</a></p>
+                        <img src="img/weblog.png" alt="Blog example">
 
                         <aside class="notes">
-                            шапка
-                            заголовок
-                            дата
-                            тело
+                            header
+                            heading
+                            date
+                            body
                         </aside>
                     </section>
 
                     <section>
-                        <h3>Пример: блог (3D-вид Firefox)</h3>
+                        <h3>Example: blog (Firefox 3D view)</h3>
 
                         <img src="img/weblog-3dtilt_2.png" alt="Блог">
 
                         <aside class="notes">
-                            Как составляются Web-документы?
+                            How Web documents are composed
                         </aside>
                     </section>
                 </section>
