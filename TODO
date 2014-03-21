@@ -16,3 +16,10 @@ TODO
 * Element order: embed example, explain issue
 
 * Add links to the spec! E.g. http://www.w3.org/TR/REC-html40/struct/links.html
+
+
+<li>Thoughtful approach to composing HTML</li>
+                        <li>Treat HTML pages as <em>documents</em></li>
+                        <li>Укрепить навыки Front-End разработки</li>
+
++ Example: this presentation
