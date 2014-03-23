@@ -119,7 +119,7 @@
                             <li>Table of contents</li>
                             <li>Introduction</li>
                             <li>Chapters</li>
-                            <li>Conclusions</li>
+                            <li>Conclusion</li>
                             <li>References</li>
                         </ul>
                     </section>
@@ -404,78 +404,141 @@
                 </section>
 
                 <section>
-                    <h2>Преимущества семантической верстки</h2>
+                    <section>
+                        <h2>Benefits of semantic markup</h2>
+                    </section>
 
-                    <ul>
-                        <li class="fragment">Лучше обрабатывается программами</li>
-                        <li class="fragment">Повышается качество CSS+JS</li>
-                        <li class="fragment">Легче менять представление</li>
-                        <li class="fragment">Многократное использование HTML-кода</li>
-                    </ul>
+                    <section>
+                        <h3>Better read by programs</h3>
+                        <ul>
+                            <li class="fragment">Screen readers</li>
+                            <li class="fragment">Search engines</li>
+                            <li class="fragment">Sharing tools</li>
+                            <li class="fragment">Content clippers</li>
+                            <li class="fragment">News grabbers</li>
+                            <li class="fragment">...</li>
+                        </ul>
+                    </section>
 
-                    <aside class="notes">
-                        Хорошо и разработчику (эффективная работа, интеграция с сервисами, минимальное повторение усилий), и в итоге конечному пользователю (пользователи используют программы)
-                    </aside>
+
+                    <section>
+                        <h3>Easier to change presentation</h3>
+
+                        <!-- "demo ahead" or same "multiple representations" image-->
+                    </section>
+
+                    <section>
+                        <h3>Reuse HTML across projects</h3>
+
+                        <pre><code class="html">
+&lt;section class=&quot;carousel&quot;&gt;
+    &lt;h1&gt;Featured Content&lt;/h1&gt;
+
+    &lt;article class=&quot;slide&quot;&gt;
+        &lt;h2&gt;Slide Title&lt;/h2&gt;
+        &lt;div class=&quot;slide-content&quot;&gt; ... &lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;slide&quot;&gt;
+        &lt;h2&gt;Slide Title&lt;/h2&gt;
+        &lt;div class=&quot;slide-content&quot;&gt; ... &lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+                        </code></pre>
+                        For more patterns see <a href="http://www.slideshare.net/apticknor/semantics-html" title="Anthony Ticknor - Semantics & HTML" target="_blank">these slides</a>
+                        <!-- bootstrap or similar examples -->
+                        <!-- also see examples at http://www.slideshare.net/apticknor/semantics-html -->
+
+                        <aside class="notes">
+                            Extract common patterns and reuse them!
+
+                            Also improves developer productivity
+                                * Minimal effort repetition
+                                * Better integration with external services
+                                * Eventually better user experience
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>Improves your CSS+JS too</h3>
+
+                        <!-- Better structure =
+                                1) easier to work with (programming: a lot depends on data structure)
+                                2) easier to style
+                        -->
+                    </section>
                 </section>
 
                 <section>
                     <section>
                         <h2>Demo: <a href="http://css-tricks.com" target="_blank">css-tricks.com</a></h2>
-                        <img src="img/csstricks-wide.png" alt="CSS Tricks - экран 4:3" title="Экран 4:3">
+                        <img src="img/csstricks-wide.png" alt="CSS Tricks - 4:3 screen" title="4:3 screen">
                     </section>
                     <section>
-                        <h3>Мобильный вид</h3>
-                        <img src="img/csstricks-mobile.png" alt="CSS Tricks - мобильный вид" title="Мобильный">
+                        <h3>Mobile view</h3>
+                        <img src="img/csstricks-mobile.png" alt="CSS Tricks - mobile view" title="Mobile">
                     </section>
                     <section>
-                        <h3>Мобильный вид (c навигацией)</h3>
-                        <img src="img/csstricks-mobile-nav.png" alt="CSS Tricks - мобильный вид (c навигацией)" title="Мобильный с навигацией">
+                        <h3>Mobile view (with navigation)</h3>
+                        <img src="img/csstricks-mobile-nav.png" alt="CSS Tricks - mobile view (with navigation)" title="Mobile with navigation">
                     </section>
                     <section>
-                        <h3>Печать</h3>
-                        <img src="img/csstricks-print.png" alt="CSS Tricks - печать" title="Печать">
+                        <h3>Print</h3>
+                        <img src="img/csstricks-print.png" alt="CSS Tricks - print" title="Print">
                     </section>
                     <section>
                         <h3><a href="http://evernote.com/webclipper/">Evernote Clipped Article</a></h3>
                         <img src="img/csstricks-evernote.png" alt="CSS Tricks - Evernote Clipped Article" title="Evernote CLipped Article">
                     </section>
                     <section>
-                        <h3>Google (статья)</h3>
-                        <img src="img/csstricks-googlesearch.png" alt="Статья в результатах поиска" title="Статья в результатах поиска">
+                        <h3>Search result snippet (article)</h3>
+                        <img src="img/csstricks-googlesearch.png" alt="Search result snippet for article" title="Search result snippet for article">
                     </section>
                     <section>
-                        <h3>Google (домашняя страница)</h3>
-                        <img src="img/csstricks-googlesearch-homepage.png" alt="Домашняя страница в результатах поиска" title="Домашняя в результатах поиска">
+                        <h3>Search result snippet (home)</h3>
+                        <img src="img/csstricks-googlesearch-homepage.png" alt="Search result snippet for home page" title="Search result snippet for home page">
                     </section>
                     <section>
                         <h3>Google Plus Share</h3>
-                        <img src="img/csstricks-googleplus-share.png" alt="Статья расшарена в Google+" title="Статья расшарена в Google+">
+                        <img src="img/csstricks-googleplus-share.png" alt="Article shared on Google+" title="Article shared on Google+">
                     </section>
                 </section>
 
                 <section>
-                    <h2>Заключение</h2>
+                    <h2>Takeaways</h2>
 
                     <ul>
-                        <li class="fragment">Относитесь ответственно к <abbr title="Information Architecture (Архитектура Информации)">IA</abbr></li>
-                        <li class="fragment">Гиперссылки важны! Берегите их</li>
-                        <li class="fragment">Составляя HTML, Вы составляете<br>
-                            <em>структуру информации</em>
-                        </li>
-                        <li class="fragment">Делайте ошибки, экспериментируйте</li>
-                        <li class="fragment">Следите за стандартами</li>
-                        <li class="fragment"><i>Смотрите на дату материалов</i></li>
+                        <li class="fragment">Be responsible about Information Architecture</li>
+                        <li class="fragment">Your HTML = your IA</li>
+                        <li class="fragment">Hyperlinks are important! Don't break them!</li>
+                        <li class="fragment">Experiment, make mistakes</li>
+                        <li class="fragment">Follow the standards</li>
+                        <li class="fragment">Stuff gets obsolete</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Let's talk!</h2>
+
+                    <p><a href="http://dpashk.com" target="_blank">http://dpashk.com</a></p>
+                    <p><a href="mailto:dpashk@gmail.com">dpashk@gmail.com</a></p>
+                </section>
+
+                <section>
+                    <h2>Resources</h2>
+
+                    TODO
                 </section>
 
                 <section>
                     <h2>Attributions</h2>
 
-                    <p>HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></p>
-
-                    <p>JS Logo by ...</p>
-
-                    <p>CSS3 Logo by ...</p>
+                    <ul>
+                        <li>Matryoshka image adapted from <br><a href="http://commons.wikimedia.org/wiki/File:Russian-Matroshka2.jpg">this one by Fanghong</a></li>
+                        <li>HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></li>
+                        <li>JS Logo by <a href="https://github.com/voodootikigod/logo.js/issues/39">AJ ONeal</a></li>
+                        <li>CSS3 Logo by ???</li>
+                    </ul>
                 </section>
 
             </div>
