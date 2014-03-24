@@ -285,18 +285,22 @@
                     </section>
 
                     <section>
-                        <h3>Порядок следования элементов</h3>
+                        <h3>Element order</h3>
 
-                        <p class="fragment"><strong>Важен!</strong></p>
+                        <p class="fragment"><strong>MATTERS!</strong></p>
 
-                        <ul>
-                            <li class="fragment">Поисковики, RSS, проч.</li>
-                            <li class="fragment">Мобильные браузеры</li>
-                            <li class="fragment">Клавиатурная навигация</li>
-                            <li class="fragment">Поиск внутри страницы</li>
+                        <ul class="fragment">
+                            <li>Search engines</li>
+                            <li>Mobile browsing</li>
+                            <li>Keyboard navigation</li>
+                            <li>Find in page</li>
                         </ul>
+                    </section>
 
-                        <p class="fragment" style="margin-top: 1em"><a target="_blank" href="http://www.adobe.com/devnet/html5/articles/semantic-markup.html">Пример</a> (правая колонка)<p>
+                    <section data-transition="none">
+                        <h3>Element order</h3>
+
+                        <p><a target="_blank" href="http://www.adobe.com/devnet/html5/articles/semantic-markup.html">Example</a> (right column)<p>
                     </section>
 
                     <section>
@@ -339,20 +343,17 @@
                         <h2>HTML5</h2>
 
                         <ul>
-                            <li>Упрощен синтаксис</li>
-                            <li>Новые элементы и атрибуты</li>
-                            <li>Новые API</li>
-                            <li>Четкий алгоритм &laquo;чтения&raquo; браузером
-                                <ul>
-                                    <li>Определение структуры</li>
-                                    <li>Обработка ошибок</li>
-                                </ul>
+                            <li>Simplified syntax</li>
+                            <li>New elements and attributes</li>
+                            <li>New API</li>
+                            <li>Precisely defined parsing rules,<br>
+                                <em>including error behavior</em>
                             </li>
                         </ul>
                     </section>
 
                     <section>
-                        <h3>Новые элементы</h3>
+                        <h3>New elements</h3>
 
                         <ul>
                             <li>section, article, aside, nav</li>
@@ -362,28 +363,35 @@
                             <li>audio, video, canvas</li>
                         </ul>
 
-                        <p><a href="http://www.w3.org/TR/html5-diff/#new-elements">Полный список</a></p>
+                        <p><a href="http://www.w3.org/TR/html5-diff/#new-elements" target="_blank">Full list</a></p>
                     </section>
 
                     <section>
-                        <h3>Не хватает элементов?</h3>
+                        <h3>Not enough elements?</h3>
+                    </section>
 
-                        <p class="fragment">Точно?</p>
-                        <p class="fragment">Используйте атрибут <code>class</code></p>
+                    <section data-transition="none">
+                        <h3>Not enough elements?</h3>
+
+                        <p>Are you sure?</p>
+                    </section>
+
+                    <section data-transition="none">
+                        <h3>Not enough elements?</h3>
+
+                        <p>Are you sure?</p>
+                        <p>Use the <code>class</code> attribute</p>
                     </section>
 
                     <section>
-                        <h3>Секции</h3>
+                        <h3>Sections</h3>
 
-                        <figure>
-                            <img src="img/html5_structure-smashingmag.png" alt="Структура документа в HTML5">
-                            <figcaption>Источник - <a href="http://coding.smashingmagazine.com/2009/07/16/html5-and-the-future-of-the-web/">Smashing Magazine</a></figcaption>
-                        </figure>
-                        Каждая секция - &laquo;мини-документ&raquo;
+                        <img src="img/html5_structure-smashingmag.png" alt="Структура документа в HTML5">
+                        <p><small>Each section is like a mini-document</small></p>
                     </section>
 
                     <section>
-                        <h3>Новые поля ввода</h3>
+                        <h3>New input types</h3>
 
                         <p>
                             <code>search</code>, <code>email</code>, <code>url</code>, <code>tel</code>,<code>number</code>, <br>
@@ -392,17 +400,17 @@
                             <code>time</code>, <code>datetime</code>, <code>datetime-local</code>
                         </p>
 
-                        <p><a href="http://html5doctor.com/html5-forms-input-types/" target="_blank">Статья</a></p>
+                        <p><a href="http://html5doctor.com/html5-forms-input-types/" target="_blank">See examples</a></p>
                     </section>
 
                     <section>
-                        <h3>Ввод: не только текст!</h3>
+                        <h3>Input: not just text!</h3>
 
                         <p><code>&lt;input type=&quot;file&quot; accept=&quot;image/*;capture=camera&quot;&gt;</code></p>
                         <p><code>&lt;input type=&quot;file&quot; accept=&quot;video/*;capture=camcorder&quot;&gt;</code></p>
                         <p><code>&lt;input type=&quot;file&quot; accept=&quot;audio/*;capture=microphone&quot;&gt;</code></p>
 
-                        <a href="http://jsfiddle.net/dipish/WWqR5/show/">Демо</a>
+                        <a href="http://jsfiddle.net/dipish/WWqR5/show/" target="_blank">Demo</a>
                     </section>
                 </section>
 
@@ -427,11 +435,11 @@
                     <section>
                         <h3>Easier to change presentation</h3>
 
-                        <!-- "demo ahead" or same "multiple representations" image-->
+                        <img src="img/content-is-like-water-1240.jpg" alt="Content is like water...">
                     </section>
 
                     <section>
-                        <h3>Reuse HTML across projects</h3>
+                        <h3>Reusability across projects</h3>
 
                         <pre><code class="html">
 &lt;section class=&quot;carousel&quot;&gt;
@@ -448,7 +456,7 @@
     &lt;/article&gt;
 &lt;/section&gt;
                         </code></pre>
-                        For more patterns see <a href="http://www.slideshare.net/apticknor/semantics-html" title="Anthony Ticknor - Semantics & HTML" target="_blank">these slides</a>
+                        <small>More great patterns from <a href="http://www.slideshare.net/apticknor/semantics-html" title="Anthony Ticknor - Semantics & HTML" target="_blank">Anthony Ticknor</a></small>
                         <!-- bootstrap or similar examples -->
                         <!-- also see examples at http://www.slideshare.net/apticknor/semantics-html -->
 
@@ -464,6 +472,8 @@
 
                     <section>
                         <h3>Improves your CSS+JS too</h3>
+
+                        <img src="img/algorithms-datastructures.jpg" alt="Algorithms + Data Structures = Programs (book cover)">
 
                         <!-- Better structure =
                                 1) easier to work with (programming: a lot depends on data structure)
@@ -541,6 +551,8 @@
                         <li>HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></li>
                         <li>JS Logo by <a href="https://github.com/voodootikigod/logo.js/issues/39">AJ ONeal</a></li>
                         <li>CSS3 Logo by ???</li>
+                        <li>&quot;HTML5 Elements&quot; image by <a href="http://coding.smashingmagazine.com/2009/07/16/html5-and-the-future-of-the-web/">Tim Wright for Smashing Magazine</a>
+                        <li>&quot;Content is like water&quot; image <a href="http://www.inpixelitrust.fr/blog/illustration-content-is-like-water-et-traduction-responsive-webdesign-present-et-futur-de-ladaptation-mobile/">by Stéphanie Walter for Alsacréations</a></li>
                     </ul>
                 </section>
 
