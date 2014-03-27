@@ -207,9 +207,7 @@
 
                         <h3>Many representations</h3>
 
-                        TODO image same data, many representations
-                        * desktop-tablet-mobile?
-                        * website-snippet-print
+                        <img src="img/bostonglobe-responsive.jpg" alt="Boston Globe responsive website">
                     </section>
 
                     <section>
@@ -267,20 +265,24 @@
 
                 <section>
                     <section>
-                        <h2>Структура HTML</h2>
+                        <h2>HTML <strong>documents</strong></h2>
+                        <p>Composed of <em>elements</em></p>
 
-                        <ul>
-                            <li>Элементы разных типов, обозначаются тегами</li>
-                            <li>Корневой элемент <code>&lt;html&gt;</code></li> <!-- которым многие пренебрегают -->
-                            <li>Есть невидимый элемент <code>&lt;head&gt;</code>, содержащий<br>
-                                информацию о документе (<i>метаданные</i>)
-                            </li>
-                            <li>Элемент <code>&lt;body&gt;</code> для видимого содержимого</li>
-                        </ul>
+                        <pre><code class="html" contenteditable>
+&lt;html&gt; &lt;!-- ROOT ELEMENT --&gt;
+    &lt;head&gt;
+        &lt;!--  METADATA: title, author, description, etc. --&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;!--  PAYLOAD CONTENT --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
 
                         <aside class="notes">
-                            <p>Многие пренебрегают элементом html, хотя это полноценный элемент!</p>
-                            <p>В head может быть очень много полезной информации о документе (метаданные), также как на титульном листе публикации. Следует хорошо в этом разбираться.</p>
+                            <p>Many overlook that html is actually a full element, just like others</p>
+                            <p>The head element can contain lots of useful information about the document (metadata), this is akin to a front page of a publication.</p>
                         </aside>
                     </section>
 
@@ -300,7 +302,7 @@
                     <section data-transition="none">
                         <h3>Element order</h3>
 
-                        <p><a target="_blank" href="http://www.adobe.com/devnet/html5/articles/semantic-markup.html">Example</a> (right column)<p>
+                        <a href="http://www.smashingmagazine.com/" title="Smashing Magazine"><img src="img/smashingmag.png" alt="Smashing Magazine home page"></a>
                     </section>
 
                     <section>
@@ -548,6 +550,7 @@
 
                     <ul>
                         <li>Matryoshka image adapted from <br><a href="http://commons.wikimedia.org/wiki/File:Russian-Matroshka2.jpg">this one by Fanghong</a></li>
+                        <li>Boston Globe responsive website<br>by <a href="http://www.flickr.com/photos/69797234@N06/7203485148/in/photostream/" target="_blank">Antoine Lefeuvre</a>
                         <li>HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></li>
                         <li>JS Logo by <a href="https://github.com/voodootikigod/logo.js/issues/39">AJ ONeal</a></li>
                         <li>CSS3 Logo by ???</li>
