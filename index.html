@@ -30,8 +30,15 @@
             .reveal {
                 font-family: "Ubuntu", sans-serif;
             }
+                .reveal blockquote {
+                    text-align: left;
+                }
                 .reveal strong {
                     color: #FD772B;;
+                }
+                .reveal pre.blowup {
+                    font-size: 0.8em;
+                    width: 95%;
                 }
                 .reveal img, .reveal video, .reveal iframe {
                     max-width: 85%;
@@ -264,30 +271,30 @@
                 </section>
 
                 <section>
-                    <section>
-                        <h2>HTML <strong>documents</strong></h2>
-                        <p>Composed of <em>elements</em></p>
+                    <h2>HTML <strong>documents</strong></h2>
+                    <p>Composed of <em>elements</em></p>
 
-                        <pre><code class="html" contenteditable>
+                    <pre><code class="html" contenteditable>
 &lt;html&gt; &lt;!-- ROOT ELEMENT --&gt;
-    &lt;head&gt;
-        &lt;!--  METADATA: title, author, description, etc. --&gt;
-    &lt;/head&gt;
+&lt;head&gt;
+    &lt;!--  METADATA: title, author, description, etc. --&gt;
+&lt;/head&gt;
 
-    &lt;body&gt;
-        &lt;!--  PAYLOAD CONTENT --&gt;
-    &lt;/body&gt;
+&lt;body&gt;
+    &lt;!--  PAYLOAD CONTENT --&gt;
+&lt;/body&gt;
 &lt;/html&gt;
-                        </code></pre>
+                    </code></pre>
 
-                        <aside class="notes">
-                            <p>Many overlook that html is actually a full element, just like others</p>
-                            <p>The head element can contain lots of useful information about the document (metadata), this is akin to a front page of a publication.</p>
-                        </aside>
-                    </section>
+                    <aside class="notes">
+                        <p>Many overlook that html is actually a full element, just like others</p>
+                        <p>The head element can contain lots of useful information about the document (metadata), this is akin to a front page of a publication.</p>
+                    </aside>
+                </section>
 
+                <section>
                     <section>
-                        <h3>Element order</h3>
+                        <h2>Element order</h2>
 
                         <p class="fragment"><strong>MATTERS!</strong></p>
 
@@ -300,42 +307,91 @@
                     </section>
 
                     <section data-transition="none">
-                        <h3>Element order</h3>
+                        <h2>Element order</h2>
 
-                        <a href="http://www.smashingmagazine.com/" title="Smashing Magazine"><img src="img/smashingmag.png" alt="Smashing Magazine home page"></a>
+                        <a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.html/" title="Adobe Developer Connection"><img src="img/adobedeveloper.png" alt="Adobe Developer Connection page"></a>
+                    </section>
+
+                    <section data-transition="none">
+                        <h2>Element order</h2>
+
+                        <img src="img/adobedeveloper-badordering.png" alt="Adobe Developer Connection page - suboptimal element ordering">
+                    </section>
+
+                    <section data-transition="none">
+                        <h2>Element order</h2>
+
+                        <img src="img/adobedeveloper-goodordering.png" alt="Adobe Developer Connection page - better element ordering">
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Links</h2>
+
+                        Are the essence of the World Wide Web
+
+                        <aside class="notes">
+                            <p>Links are what makes hypertext hypertext</p>
+                            <p>link - isn't just a tag you use to include CSS. It's a LINK to an external resource!</p>
+                        </aside>
                     </section>
 
                     <section>
-                        <h3>Links</h3>
+                        <h3>Hyperlinks</h3>
 
+                        <pre class="blowup"><code class="html">
+&lt;a href="/cats.html"&gt;Please don't break my href!&lt;/a&gt;
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Links to external resources</h3>
+
+                        <pre class="blowup"><code class="html">
+&lt;link rel="shortcut icon" href="/favicon.ico"&gt;
+&lt;link rel="apple-touch-icon" href="/touch-icon.png"&gt;
+&lt;link rel="stylesheet" href="/styles/main.css"&gt;
+                        </code></pre>
+                        <blockquote cite="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#external-resource-link">&hellip; used to augment the current document, generally automatically processed by the user agent.</blockquote>
+                    </section>
+
+                    <section>
+                        <h3>Other uses of <code>link</code></h3>
+                    </section>
+
+                    <section>
+                        <h4>Author</h4>
+
+                        <img src="img/links-author.png" alt="Author link is used by search engines">
+                    </section>
+
+                    <section>
+                        <h4>Site search</h4>
+
+                        <img src="img/links-search.png" alt="Search link enables searching the website before visiting it!">
+                    </section>
+
+                    <section>
+                        <h4>News feed</h4>
+
+                        <img src="img/links-newsfeed.png" alt="Feed link allows content grabbing by feed readers">
+                    </section>
+
+                    <section>
+                        <h4>Also...</h4>
                         <ul>
-                            <li class="fragment">Are a crucial element of the Web!</li> <!-- What makes hypertext hypertext -->
-                            <li class="fragment">Два типа: <!-- spoiler -->
-                                <ul>
-                                    <li class="fragment">Гиперссылки <code>&lt;a&gt;</code></li>
-                                    <li class="fragment">Ссылки на внешние ресурсы <code>&lt;link&gt;</code>  <!-- В этом смысл того, что мы копипастим каждый день -->
-                                        <p class="fragment"><i>Дополняют <strong>текущий</strong> элемент</i></p>
-                                        <ul class="fragment">
-                                            <li>Стили, иконки, шрифты, скрипты</li>
-                                            <li>Новостная лента (RSS)</li>
-                                            <li>Версия на другом языке</li>
-                                            <li>PDF-версия</li>
-                                            <li>Следующая/предыдущая страница</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+                            <li>Alternate language</li>
+                            <li>Previous/next page</li>
+                            <li>License</li>
+                            <li>PDF version</li>
                         </ul>
-
-
-                        <ul style="margin-top: 1em;" class="fragment">
-                            <li><strong>Не ломайте их функционал</strong></li>
-                            <li><strong>Не изобретайте <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#linkTypes">велосипед</a></strong></li>
-                        </ul>
+                        <p style="margin-top: 1em;">
+                            <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#linkTypes" title="Link Types &mdash; W3" target="_blank">See the spec</a> for more
+                        </p>
 
                         <aside class="notes">
-                            <p>Ссылки - то, что главным образом делает гипертекст гипертекстом</p>
-                            <p>link - не просто какой-то служебный тег. Это ССЫЛКА на внешний ресурс</p>
+                            Don't reinvent the bicycle, the spec already defines a lot of useful cases. Feel free to experiment though.
                         </aside>
                     </section>
                 </section>
@@ -579,7 +635,8 @@
                 maxScale: 1.2,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                // transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: 'none',
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
