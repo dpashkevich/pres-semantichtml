@@ -248,18 +248,33 @@
 
 
                 <section>
-                    <h2>Гипертекст</h2>
+                    <section>
+                        <h2>Hypertext</h2>
 
-                    <ul>
-                        <li class="fragment">Фундаментальный элемент WWW</li>
-                        <li class="fragment"><i>Набор текстов со ссылками между ними<br> (<strong>гиперссылки</strong>)</i></li>
-                        <li class="fragment">Легко расширять, связывать, делиться</li>
-                        <li class="fragment">Язык разметки гипертекста &mdash; HTML</li>
-                    </ul>
+                        Fundamental concept behind WWW
 
-                    <aside class="notes">
-                        Рассказываю т.к. эти принципы нужно держать в голове при составлении Web-документов
-                    </aside>
+                        <aside class="notes">
+                            Рассказываю т.к. эти принципы нужно держать в голове при составлении Web-документов
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>The Idea</h3>
+
+                        Plenty of texts with links between them
+                        <img src="img/cernwww.gif" alt="WorldWideWeb browser">
+                    </section>
+
+                    <section>
+                        <h3>Extend, connect share</h3>
+                        <img src="img/hypertext.png" alt="hypertext">
+                    </section>
+
+                    <section>
+                        <h3>The language?</h3>
+
+                        <strong>HyperText Markup Language</strong>
+                    </section>
                 </section>
 
                 <section>
@@ -272,15 +287,15 @@
                     <h2>HTML <strong>documents</strong></h2>
                     <p>Composed of <em>elements</em></p>
 
-                    <pre><code class="html" contenteditable>
+                    <pre><code class="html">
 &lt;html&gt; &lt;!-- ROOT ELEMENT --&gt;
-&lt;head&gt;
-    &lt;!--  METADATA: title, author, description, etc. --&gt;
-&lt;/head&gt;
+    &lt;head&gt;
+        &lt;!--  METADATA: title, author, description, etc. --&gt;
+    &lt;/head&gt;
 
-&lt;body&gt;
-    &lt;!--  PAYLOAD CONTENT --&gt;
-&lt;/body&gt;
+    &lt;body&gt;
+        &lt;!--  PAYLOAD CONTENT --&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
                     </code></pre>
 
@@ -462,9 +477,10 @@
                     <section>
                         <h3>Input: not just text!</h3>
 
-                        <p><code>&lt;input type=&quot;file&quot; accept=&quot;image/*;capture=camera&quot;&gt;</code></p>
-                        <p><code>&lt;input type=&quot;file&quot; accept=&quot;video/*;capture=camcorder&quot;&gt;</code></p>
-                        <p><code>&lt;input type=&quot;file&quot; accept=&quot;audio/*;capture=microphone&quot;&gt;</code></p>
+                        <pre class="blowup"><code class="html">
+&lt;input type=&quot;file&quot; accept=&quot;image/*;capture=camera&quot;&gt;
+        &lt;!-- also: camcorder, microphone --&gt;
+                        </code></pre>
 
                         <a href="http://jsfiddle.net/dipish/WWqR5/show/" target="_blank">Demo</a>
                     </section>
@@ -477,13 +493,13 @@
 
                     <section>
                         <h3>Better read by programs</h3>
-                        <ul>
-                            <li class="fragment">Screen readers</li>
-                            <li class="fragment">Search engines</li>
-                            <li class="fragment">Sharing tools</li>
-                            <li class="fragment">Content clippers</li>
-                            <li class="fragment">News grabbers</li>
-                            <li class="fragment">...</li>
+                        <ul class="fragment">
+                            <li>Screen readers</li>
+                            <li>Search engines</li>
+                            <li>Sharing tools</li>
+                            <li>Content clippers</li>
+                            <li>News grabbers</li>
+                            <li>...</li>
                         </ul>
                     </section>
 
@@ -503,12 +519,12 @@
 
     &lt;article class=&quot;slide&quot;&gt;
         &lt;h2&gt;Slide Title&lt;/h2&gt;
-        &lt;div class=&quot;slide-content&quot;&gt; ... &lt;/p&gt;
+        &lt;div class=&quot;slide-content&quot;&gt; ... &lt;/div&gt;
     &lt;/article&gt;
 
     &lt;article class=&quot;slide&quot;&gt;
         &lt;h2&gt;Slide Title&lt;/h2&gt;
-        &lt;div class=&quot;slide-content&quot;&gt; ... &lt;/p&gt;
+        &lt;div class=&quot;slide-content&quot;&gt; ... &lt;/div&gt;
     &lt;/article&gt;
 &lt;/section&gt;
                         </code></pre>
@@ -527,7 +543,7 @@
                     </section>
 
                     <section>
-                        <h3>Improves your CSS+JS too</h3>
+                        <h3>Improves your JS too</h3>
 
                         <img src="img/algorithms-datastructures.jpg" alt="Algorithms + Data Structures = Programs (book cover)">
 
@@ -574,16 +590,29 @@
                 </section>
 
                 <section>
-                    <h2>Takeaways</h2>
+                    <section>
+                        <h2>Takeaways</h2>
+                    </section>
 
-                    <ul>
-                        <li class="fragment">Be responsible about Information Architecture</li>
-                        <li class="fragment">Your HTML = your IA</li>
-                        <li class="fragment">Hyperlinks are important! Don't break them!</li>
-                        <li class="fragment">Experiment, make mistakes</li>
-                        <li class="fragment">Follow the standards</li>
-                        <li class="fragment">Stuff gets obsolete</li>
-                    </ul>
+                    <section>
+                        <h3>Be responsible about IA</h3>
+                        <p>(Information Architecture)</p>
+                        <p>Your HTML = your IA</p>
+                    </section>
+                    <section>
+                        <h3>Hyperlinks are important!</h3>
+
+                        <p>Don't break their functionality!</p>
+                    </section>
+                    <section>
+                        <h3>Experiment, make mistakes</h3>
+                    </section>
+                    <section>
+                        <h3>Follow the standards</h3>
+                    </section>
+                    <section>
+                        <h3>Stuff gets obsolete</h3>
+                    </section>
                 </section>
 
                 <section>
@@ -603,8 +632,10 @@
                     <h2>Attributions</h2>
 
                     <ul>
-                        <li>Matryoshka image adapted from <br><a href="http://commons.wikimedia.org/wiki/File:Russian-Matroshka2.jpg">this one by Fanghong</a></li>
-                        <li>Boston Globe responsive website<br>by <a href="http://www.flickr.com/photos/69797234@N06/7203485148/in/photostream/" target="_blank">Antoine Lefeuvre</a>
+                        <li>Matryoshka from image <a href="http://commons.wikimedia.org/wiki/File:Russian-Matroshka2.jpg">by Fanghong</a></li>
+                        <li>Boston Globe responsive website by <a href="http://www.flickr.com/photos/69797234@N06/7203485148/in/photostream/" target="_blank">Antoine Lefeuvre</a>
+                        <li>Extend, connect share from image by <a href="http://www.flickr.com/photos/thefangmonster/4683443161/in/photostream/" target="_blank">Noah Sussman</a>
+                        <li>WWW browser by <a href="http://www.w3.org/People/Berners-Lee/WorldWideWeb.html" target="_blank">Tim Berners-Lee</a>
                         <li>HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></li>
                         <li>JS Logo by <a href="https://github.com/voodootikigod/logo.js/issues/39">AJ ONeal</a></li>
                         <li>CSS3 Logo by ???</li>
