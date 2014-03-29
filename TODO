@@ -3,25 +3,7 @@ TODO
 * CC-BY notice on front page
 * www points illustrations
 * hypertext illustration
-* HTML Role image (make dark background!)
-
-* HTML structure
-    <html>
-        <head></head>
-        <body></body>
-    </html>
 
 * Different elements represented by different tags
 
-* Element order: embed example, explain issue
-
-* Two types of hyperlinks: split into 2 slides, provide illustrations
-
 * Add links to the spec! E.g. http://www.w3.org/TR/REC-html40/struct/links.html
-
-
-<li>Thoughtful approach to composing HTML</li>
-                        <li>Treat HTML pages as <em>documents</em></li>
-                        <li>Укрепить навыки Front-End разработки</li>
-
-+ Example: this presentation
